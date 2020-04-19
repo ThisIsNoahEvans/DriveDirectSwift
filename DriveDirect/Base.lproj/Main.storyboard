@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,67 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DriveDirect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste in your Google Drive Sharing link..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDi-dL-3R7">
+                                <rect key="frame" x="20" y="431" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbK-vZ-dhg">
+                                <rect key="frame" x="150" y="366" width="114" height="30"/>
+                                <state key="normal" title="Copy Direct Link"/>
+                                <connections>
+                                    <action selector="getDirectLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v6M-kR-gop"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRK-S8-pUo">
+                                <rect key="frame" x="142" y="272" width="130" height="30"/>
+                                <state key="normal" title="Open Google Drive"/>
+                                <connections>
+                                    <action selector="openDrive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ipY-Pz-8H2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="status_label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ML8-Gd-vkq">
+                                <rect key="frame" x="161.5" y="402" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DriveDirect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBG-a9-UgZ">
+                                <rect key="frame" x="45" y="44" width="324" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dbK-vZ-dhg" firstAttribute="centerX" secondItem="ML8-Gd-vkq" secondAttribute="centerX" id="0z1-Lp-aAg"/>
+                            <constraint firstItem="dbK-vZ-dhg" firstAttribute="centerX" secondItem="uBG-a9-UgZ" secondAttribute="centerX" id="3R2-K8-g4p"/>
+                            <constraint firstItem="uBG-a9-UgZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="736-gk-33m"/>
+                            <constraint firstItem="dbK-vZ-dhg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="366" id="BXY-7V-8Ci"/>
+                            <constraint firstItem="dbK-vZ-dhg" firstAttribute="centerX" secondItem="mRK-S8-pUo" secondAttribute="centerX" id="Bfm-Y0-u0w"/>
+                            <constraint firstItem="qDi-dL-3R7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MTA-iG-AcW"/>
+                            <constraint firstItem="qDi-dL-3R7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y2L-l5-Yco"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qDi-dL-3R7" secondAttribute="trailing" id="YyB-OV-5GR"/>
+                            <constraint firstItem="ML8-Gd-vkq" firstAttribute="top" secondItem="dbK-vZ-dhg" secondAttribute="bottom" constant="6" id="pPP-3u-ZeC"/>
+                            <constraint firstItem="dbK-vZ-dhg" firstAttribute="top" secondItem="mRK-S8-pUo" secondAttribute="bottom" constant="64" id="smD-Bb-CtA"/>
+                            <constraint firstItem="ML8-Gd-vkq" firstAttribute="centerX" secondItem="qDi-dL-3R7" secondAttribute="centerX" id="wwE-3d-2CW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="linkEntryBox" destination="qDi-dL-3R7" id="RfN-de-ang"/>
+                        <outlet property="statusLabel" destination="ML8-Gd-vkq" id="Z5V-Vs-8hk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
