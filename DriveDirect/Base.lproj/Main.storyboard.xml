@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DriveDirect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DriveDirect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBG-a9-UgZ">
+                                <rect key="frame" x="45" y="44" width="324" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbK-vZ-dhg">
+                                <rect key="frame" x="-218.5" y="373" width="851" height="30"/>
+                                <state key="normal" title="Copy Direct Link"/>
+                                <connections>
+                                    <action selector="getDirectLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lnD-W4-qGf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRK-S8-pUo">
+                                <rect key="frame" x="142" y="124" width="130" height="30"/>
+                                <state key="normal" title="Open Google Drive"/>
+                                <connections>
+                                    <action selector="openDrive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RsO-Gq-Pjs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ML8-Gd-vkq">
+                                <rect key="frame" x="188.5" y="247" width="37.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste in your Google Drive Sharing link..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDi-dL-3R7">
+                                <rect key="frame" x="20" y="411" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avr-pv-wVw">
+                                <rect key="frame" x="188" y="162" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dbK-vZ-dhg" firstAttribute="centerX" secondItem="uBG-a9-UgZ" secondAttribute="centerX" id="3R2-K8-g4p"/>
+                            <constraint firstItem="uBG-a9-UgZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="736-gk-33m"/>
+                            <constraint firstItem="dbK-vZ-dhg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Va-1p-ig7"/>
+                            <constraint firstItem="Avr-pv-wVw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="162" id="B9B-0n-Lcs"/>
+                            <constraint firstItem="dbK-vZ-dhg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="373" id="BXY-7V-8Ci"/>
+                            <constraint firstItem="dbK-vZ-dhg" firstAttribute="centerX" secondItem="mRK-S8-pUo" secondAttribute="centerX" id="Bfm-Y0-u0w"/>
+                            <constraint firstItem="qDi-dL-3R7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DmM-bL-TPd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ML8-Gd-vkq" secondAttribute="trailing" id="Gq3-nh-HDV"/>
+                            <constraint firstItem="qDi-dL-3R7" firstAttribute="top" secondItem="mRK-S8-pUo" secondAttribute="bottom" constant="257" id="KWY-xh-1l2"/>
+                            <constraint firstItem="dbK-vZ-dhg" firstAttribute="centerX" secondItem="qDi-dL-3R7" secondAttribute="centerX" id="NMx-4d-ROx"/>
+                            <constraint firstItem="ML8-Gd-vkq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="247" id="OD8-e4-pmF"/>
+                            <constraint firstItem="Avr-pv-wVw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" symbolic="YES" id="Vaw-Ku-A5A"/>
+                            <constraint firstAttribute="trailing" secondItem="Avr-pv-wVw" secondAttribute="trailing" constant="226" id="aPx-Rb-ReD"/>
+                            <constraint firstItem="ML8-Gd-vkq" firstAttribute="leading" secondItem="dbK-vZ-dhg" secondAttribute="trailing" constant="-444" id="leu-JG-lGY"/>
+                            <constraint firstItem="mRK-S8-pUo" firstAttribute="centerX" secondItem="ML8-Gd-vkq" secondAttribute="centerX" id="qVL-1h-IYW"/>
+                            <constraint firstItem="mRK-S8-pUo" firstAttribute="top" secondItem="uBG-a9-UgZ" secondAttribute="bottom" constant="8" id="svO-vY-oT3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="linkEntryBox" destination="qDi-dL-3R7" id="2BG-Ow-2Ud"/>
+                        <outlet property="statusLabel" destination="ML8-Gd-vkq" id="63Z-Fv-4Zb"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
